@@ -1,39 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="./styles.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
+  <header>
+    <img class="logo" src="./images/logo.svg" alt="logo" />
+    <img class="hamburger-menu" src="./images/icon-menu.svg" alt="">
+    <nav>
+      <div class="back">
+        <div class="front">
+          <div class="close-img-container">
+            <img src="./images/icon-close-menu.svg" alt="">
+          </div>
+          <ul>
+            <li>
+              <button class="menu-btn">Features <img src="./images/icon-arrow-down.svg" alt=""> </button>
+              <ul class="features-ul">
+                <li>
+                  <img src="./images/icon-todo.svg" alt="">
+                  <span>Todo List</span>
+                </li>
+                <li> 
+                  <img src="./images/icon-calendar.svg" alt="">
+                  <span>Calendar</span>
+                </li>
+                <li>
+                  <img src="./images/icon-reminders.svg" alt="">
+                  <span>Reminders</span>
+                </li>
+                <li>
+                  <img src="./images/icon-planning.svg" alt="">
+                  <span>Planning</span>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <button class="menu-btn">Company <img src="./images/icon-arrow-down.svg" alt=""> </button>
+              <ul class="company-ul">
+                <li>History</li>
+                <li>Our Team</li>
+                <li>Blog</li>
+              </ul>
+            </li>
+            <li>Careers</li>
+            <li>About</li>
+          </ul>
+          <button>Login</button>
+          <button>Register</button>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  Features
-  Company
-  Careers
-  About
+  <main>
+    <section>
+      <h2>Make remote work</h2>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <button>Learn more</button>
+      <div class="logos">
+        <img class="databiz" src="./images/client-databiz.svg" alt="" />
+        <img class="audio" src="./images/client-audiophile.svg" alt="" />
+        <img class="meet" src="./images/client-meet.svg" alt="" />
+        <img class="maker" src="./images/client-maker.svg" alt="" />
+      </div>
+    </section>
+    <picture >
+      <source
+        srcset="./images/image-hero-mobile.png"
+        media="(max-width: 639px)"
+      />
+      <source
+        srcset="./images/image-hero-desktop.png"
+        media="(min-width: 640px)"
+      />
+      <img class="hero-image" src="./images/image-hero-mobile.png" alt="hero-image" />
+    </picture>
+  </main>
 
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      >Frontend Mentor</a
+    >. Coded by <a href="https://www.youtube.com/CodingTube" target="_blank">David Ruiz</a>.
+  </footer>
 </body>
 </html>

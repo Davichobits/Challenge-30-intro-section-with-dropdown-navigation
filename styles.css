@@ -1,0 +1,138 @@
+:root{
+  --Almost-White: hsl(0, 0%, 98%);
+  --Medium-Gray: hsl(0, 0%, 41%);
+  --AlmostBlack: hsl(0, 0%, 8%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: 'Epilogue';
+  src: url(./fonts/Epilogue/Epilogue-VariableFont_wght.ttf);
+}
+body{
+  font-family: 'Epilogue';
+  color: var(--AlmostBlack);
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 16px 24px;
+  height: 35px;
+  & .logo{
+    margin-top: 10px;
+  }
+  & .hamburger-menu{
+    display: none;
+  }
+  & nav{
+    padding: 20px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+    height: 100%;
+    & .back{
+      background-color: var(--Medium-Gray);
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+    & .front{
+      background-color: var(--Almost-White);
+      width: 240px;
+      opacity: 1;
+    }
+    & .close-img-container{
+      text-align: right;
+    }
+    & li{
+      list-style: none;
+    }
+    & .menu-btn{
+      border: none;
+      width: 96px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Epilogue';
+      color: var(--Medium-Gray);
+      background-color: var(--Almost-White);
+      margin: 24px 0;
+      cursor: pointer;
+    }
+  }
+}
+main{
+  display: flex;
+  flex-direction: column-reverse;
+  & .hero-image{
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  & h2{
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  & p{
+    text-align: center;
+    line-height: 26px;
+    margin: 0 16px;
+    color: var(--Medium-Gray);
+    margin-bottom: 24px;
+  }
+  & button{
+    width: 136px;
+    height: 48px;
+    background-color: var(--AlmostBlack);
+    border-radius: 15px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 52px;
+  }
+  & .logos{
+    height: 26px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    justify-content: space-between;
+    margin-bottom: 96px;
+  }
+  & .databiz{
+    width: 81px;
+    height: 14px;
+  }
+  & .audio{
+    width: 52px;
+    height: 26px;
+  }
+  & .meet{
+    width: 64px;
+    height: 14px;
+  }
+  & .maker{
+    width: 59px;
+    height: 17px;
+  }
+}
+
+
+.attribution {
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
