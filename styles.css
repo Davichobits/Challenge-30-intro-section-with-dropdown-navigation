@@ -15,6 +15,14 @@
 body{
   font-family: 'Epilogue';
   color: var(--AlmostBlack);
+  background-color: var(--Almost-White);
+}
+button{
+  font-family: 'Epilogue';
+  border: none;
+  color: var(--Medium-Gray);
+  background-color: var(--Almost-White);
+  cursor: pointer;
 }
 header{
   display: flex;
@@ -26,49 +34,73 @@ header{
     margin-top: 10px;
   }
   & .hamburger-menu{
-    display: none;
+    cursor: pointer;
   }
   & nav{
-    padding: 20px;
-    width: 100%;
-    position: absolute;
-    right: 0;
-    top: 0;
-    
-    height: 100%;
+    display: none;
+    color: var(--Medium-Gray);
     & .back{
       background-color: var(--Medium-Gray);
-      opacity: 0.5;
+      opacity: 0.75;
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
-      display: flex;
-      justify-content: end;
+      height: 780px;
     }
     & .front{
       background-color: var(--Almost-White);
       width: 240px;
-      opacity: 1;
+      height: 780px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 20px;
     }
     & .close-img-container{
       text-align: right;
+      cursor: pointer;
     }
     & li{
       list-style: none;
+      margin-bottom: 26px;
+      cursor: pointer;
+    }
+    & .features-ul, .company-ul{
+      margin-left: 28px;
+      display: none;
+    }
+    & .features-img{
+      margin-right: 14px;
     }
     & .menu-btn{
-      border: none;
       width: 96px;
       height: 26px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-family: 'Epilogue';
-      color: var(--Medium-Gray);
-      background-color: var(--Almost-White);
+      font-size: 1em;
       margin: 24px 0;
+    }
+    & .btns-container{
+      position: absolute;
+      bottom: 124px;
+    }
+    & .btn{
+      display: block;
+      background-color: var(--Almost-White);
+      color: var(--Medium-Gray);
+      font-size: 0.875em;
       cursor: pointer;
+    }
+    & .login-btn{
+      margin: 0 auto 16px;
+    }
+    & .register-btn{
+      border: 1px solid var(--Medium-Gray);
+      width: 195px;
+      height: 42px;
+      border-radius: 14px;
     }
   }
 }
@@ -100,8 +132,15 @@ main{
     display: block;
     margin: 0 auto;
     margin-bottom: 52px;
+    color: var(--Almost-White);
+    font-size: 1em;
+    &:hover{
+      background-color: var(--Almost-White);
+      color: var(--AlmostBlack);
+      border: 1px solid var(--AlmostBlack);
+    }
   }
-  & .logos{
+  & .logos-container{
     height: 26px;
     display: flex;
     align-items: center;
@@ -126,13 +165,168 @@ main{
     height: 17px;
   }
 }
-
-
-.attribution {
-  font-size: 13px;
-  text-align: center;
-  margin-bottom: 48px;
+@media (min-width: 768px) {
+  header{
+    gap: 40px;
+    height: 42px;
+    margin-bottom: 60px;
+    & .hamburger-menu{
+      display: none;
+    }
+    & nav{
+      align-self: flex-start;
+      display: block;
+      width: 100%;
+      height: 100%;
+      & .back{
+        display: none;
+        width: 100%;
+      }
+      & .front{
+        position: static;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+      }
+      & .close-img-container{
+        display: none;
+      }
+      & li{
+        margin-bottom: 0px;
+      }
+      & ul {
+        width: 378px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      & .company-ul-container, .features-ul-container{
+        position: relative;
+      }
+      & .features-ul, .company-ul{
+        position: absolute;
+        border-radius: 10px;
+        background-color: var(--Almost-White);
+        padding: 18px 24px;
+        font-size:0.875em;
+        box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+        & li{
+          margin-bottom: 16px;
+        }
+      }
+      & .features-ul{
+        width: 153px;
+        height: 160px;
+        top: 40px;
+        right: 0;
+      }
+      & .company-ul{
+        width: 116px;
+        height: 128px;
+        top: 40px;
+        left: -30px;
+        padding: 24px;
+      }
+      & .menu-btn{
+        margin: 0;
+      }
+      & .btns-container{
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        justify-items: center;
+        width: 182px;
+      }
+      & .login-btn{
+        margin: 0;
+      }
+      & .register-btn{
+        width: 104px;
+      }
+    }
+  }
+  main{
+    & h2{
+      font-size: 42px;
+    }
+    & p{
+      margin: auto;
+      width: 600px;
+      font-size: 18px;
+      margin: 40px auto ;
+    }
+    & button{
+      width: 163px;
+      height: 56px;
+      font-size: 18px;
+      margin: 0 auto 46px;
+    }
+    & picture{
+      width: 80%;
+      margin: 0 auto;
+    }
+    & .logos-container{
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+@media (min-width: 1024px){
+  header{
+    gap: 60px;
+    margin: 21px 40px 67px;
+  }
+  main{
+    flex-direction: row;
+    margin: 0 40px 20px 65px;
+    & picture{
+      width: 500px;
+    }
+    & .hero-image{
+      width: 100%;
+    }
+    & h2{
+      text-align: left;
+      font-size: 40px;
+      margin: 100px 0 48px;
+    }
+    & p{
+      text-align: left;
+      margin: 0;
+      font-size: 18px;
+      width: 445px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+    & button{
+      margin: 0 0 116px;
+    }
+  }
+}
+@media (min-width: 1440px){
+  body{
+    width: 1440px;
+    margin: 0 auto;
+  }
+  main{
+    gap: 125px;
+    margin: 0 140px 120px 165px;
+    & h2{
+      text-align: left;
+      font-size: 80px;
+      width: 527px;
+      margin: 100px 0 48px;
+    }
+    & p{
+      margin-bottom: 50px;
+    }
+    & button{
+      margin: 0 0 116px;
+    }
+    & .logos-container{
+      margin-bottom: 0;
+    }
+  }
 }

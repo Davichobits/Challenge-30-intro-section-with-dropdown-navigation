@@ -10,38 +10,38 @@
 <body>
   <header>
     <img class="logo" src="./images/logo.svg" alt="logo" />
-    <img class="hamburger-menu" src="./images/icon-menu.svg" alt="">
+    <img id="hamburger-menu" class="hamburger-menu" src="./images/icon-menu.svg" alt="">
     <nav>
-      <div class="back">
+      <div class="back"></div>
         <div class="front">
           <div class="close-img-container">
-            <img src="./images/icon-close-menu.svg" alt="">
+            <img id="close-btn" src="./images/icon-close-menu.svg" alt="">
           </div>
           <ul>
-            <li>
-              <button class="menu-btn">Features <img src="./images/icon-arrow-down.svg" alt=""> </button>
-              <ul class="features-ul">
+            <li class="features-ul-container">
+              <button id="features-btn" class="menu-btn">Features <img id="features-btn-arrow" src="./images/icon-arrow-down.svg" alt=""> </button>
+              <ul id="features-ul" class="features-ul">
                 <li>
-                  <img src="./images/icon-todo.svg" alt="">
+                  <img class="features-img" src="./images/icon-todo.svg" alt="">
                   <span>Todo List</span>
                 </li>
                 <li> 
-                  <img src="./images/icon-calendar.svg" alt="">
+                  <img class="features-img" src="./images/icon-calendar.svg" alt="">
                   <span>Calendar</span>
                 </li>
                 <li>
-                  <img src="./images/icon-reminders.svg" alt="">
+                  <img class="features-img" src="./images/icon-reminders.svg" alt="">
                   <span>Reminders</span>
                 </li>
                 <li>
-                  <img src="./images/icon-planning.svg" alt="">
+                  <img class="features-img" src="./images/icon-planning.svg" alt="">
                   <span>Planning</span>
                 </li>
               </ul>
             </li>
-            <li>
-              <button class="menu-btn">Company <img src="./images/icon-arrow-down.svg" alt=""> </button>
-              <ul class="company-ul">
+            <li class="company-ul-container">
+              <button id="company-btn" class="menu-btn">Company <img id="company-btn-arrow" src="./images/icon-arrow-down.svg" alt=""> </button>
+              <ul id="company-ul" class="company-ul">
                 <li>History</li>
                 <li>Our Team</li>
                 <li>Blog</li>
@@ -50,10 +50,12 @@
             <li>Careers</li>
             <li>About</li>
           </ul>
-          <button>Login</button>
-          <button>Register</button>
+          <div class="btns-container">
+            <button class="login-btn btn">Login</button>
+            <button class="register-btn btn">Register</button>
+          </div>
         </div>
-      </div>
+      
     </nav>
   </header>
 
@@ -65,7 +67,7 @@
         create team rituals, and watch productivity soar.
       </p>
       <button>Learn more</button>
-      <div class="logos">
+      <div class="logos-container">
         <img class="databiz" src="./images/client-databiz.svg" alt="" />
         <img class="audio" src="./images/client-audiophile.svg" alt="" />
         <img class="meet" src="./images/client-meet.svg" alt="" />
@@ -75,21 +77,17 @@
     <picture >
       <source
         srcset="./images/image-hero-mobile.png"
-        media="(max-width: 639px)"
+        media="(max-width: 1023px)"
       />
       <source
         srcset="./images/image-hero-desktop.png"
-        media="(min-width: 640px)"
+        media="(min-width: 1024px)"
       />
       <img class="hero-image" src="./images/image-hero-mobile.png" alt="hero-image" />
     </picture>
   </main>
 
-  <footer class="attribution">
-    Challenge by
-    <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-      >Frontend Mentor</a
-    >. Coded by <a href="https://www.youtube.com/CodingTube" target="_blank">David Ruiz</a>.
-  </footer>
+  <script src="main.js"></script>
+
 </body>
 </html>
