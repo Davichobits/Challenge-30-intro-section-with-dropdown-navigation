@@ -22,11 +22,22 @@ const navBar = document.querySelector('nav')
 const hamburgerNenu = document.querySelector('#hamburger-menu')
 
 closeBtn.addEventListener('click', ()=>{
-  navBar.style.display = 'none';
-  hamburgerNenu.style.display = 'block'
+
+  const screenSize = window.innerWidth;
+
+  if (screenSize >= 768) {
+    navBar.style.display = 'block';
+    hamburgerNenu.style.display = 'none'
+  }else{
+    navBar.style.display = 'none';
+    hamburgerNenu.style.display = 'block'
+  }
+  
 })
 
 hamburgerNenu.addEventListener('click', ()=>{
   navBar.style.display = 'block';
   hamburgerNenu.style.display = 'none'
 })
+
+
